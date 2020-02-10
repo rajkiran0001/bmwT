@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Work Station</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+
+  <div class="page-wrap">
+    <h1>Work station results</h1>
+    <p>Date from: <input type="text" id="from_datepicker" value="2000-05-05"></p>
+    <p>Date until: <input type="text" id="till_datepicker" value="2000-05-07"></p>
+    
+  </div>
+  <!--This is our template. -->
+<!--Data will be inserted in its according place, replacing the brackets.-->
+<script id="address-template" type="text/x-handlebars-template">
+  <p>station name: 
+  
+    {{#each this}}
+   <div>
+      <h2>{{this.station}}</h2>
+      <ul>{{this.benennung}}</ul>
+   </div>
+    {{/each}} 
+  
+  
+  </p>
+  <p></p>
+</script>
+
+<!--Your new content will be displayed in here-->
+<div class="content-placeholder"></div>
+
+<script src = "js/handlebars-v4.7.2.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
